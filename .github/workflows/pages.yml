@@ -31,9 +31,12 @@ jobs:
           hugo-version: '0.109.0'
       - name: Build
         run: hugo --minify
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - name: Prepare artifacts
+        run: |
+          mkdir _site
+          cp -r public/* _site
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
