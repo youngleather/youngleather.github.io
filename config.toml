@@ -1,0 +1,40 @@
+baseURL = 'https://youngleather.github.io/'
+languageCode = 'en-uk'
+title = 'Young Leather'
+theme = "hugo-creative-portfolio-theme"
+disqusShortname = ""
+googleAnalytics = ""
+
+[params]
+# Style options: default (pink), blue, green, pink, red, sea, violet
+# Use custom.css for your custom styling
+style = "default"
+description = "Describe your website"
+copyright = "&copy;2016 Your name or company"
+sidebarAbout = [
+    "Bespoke handmade leather craft."
+]
+
+email = "young.leather.info@gmail.com"
+
+
+# Nav links in the side bar
+[[params.navlinks]]
+name = "Home"
+url = "portfolio/"
+home = true
+
+[[params.navlinks]]
+name = "About"
+url = "about/"
+
+[[params.navlinks]]
+name = "Get in touch"
+url = "contact/"
+
+[params.social]
+facebook = "full page or profile url in facebook"
+email = "email@example.com"
+twitter = "full profile url in twitter"
+instagram = "full profile url in instagram"
+youtube = "full profile url in youtube"
